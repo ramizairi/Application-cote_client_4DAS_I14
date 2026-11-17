@@ -7,5 +7,13 @@ import { Component } from '@angular/core';
   styleUrl: './navbar.css'
 })
 export class Navbar {
+   links = [
+    { name: 'Accueil'},
+    { name: 'Profil' },
+    { name: 'Conférences' },
+    { name: 'Détail' },
+    { name: 'Amis' },
+    { name: 'Notifications' }
+  ];
 
 }

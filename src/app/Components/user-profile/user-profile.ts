@@ -9,8 +9,8 @@ import { Component, signal } from '@angular/core';
 export class UserProfile {
   
   user = signal({
-    name: 'Ahmed',
-    email: 'Ahmed@esprit.tn'
+    name: 'Rami',
+    email: 'Rami@esprit.tn'
   });
   
 }

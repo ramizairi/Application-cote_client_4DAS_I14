@@ -1,0 +1,25 @@
+<section class="section-card conf-section">
+  <div class="section-body">
+    <div class="conf-header">
+      <div class="section-icon">📅</div>
+      <h2>Liste des conférences à venir</h2>
+    </div>
+
+    <div class="grid">
+      @for (conference of upcomingConferences; track conference.id) {
+        <article class="conf-card">
+          <h3>{{ conference.title }}</h3>
+          <p>{{ conference.description }}</p>
+          <p><strong>Date :</strong> {{ conference.date | date: 'dd/MM/yyyy' }}</p>
+          <p><strong>Lieu :</strong> {{ conference.place }}</p>
+          <p>
+            <strong>Places restantes :</strong>
+            {{ conference.maxParticipants - conference.nbParticipants }}
+          </p>
+        </article>
+      } @empty {
+        <p class="empty">Aucune conférence à venir.</p>
+      }
+    </div>
+  </div>
+</section>
